@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Quicksand', sans-serif;
+}
+
+
+
+.bell-icon {
+  width: 30px;
+}
+
+.dash-icon {
+  background-color: black;
+  width: 5%;
+}
+
+.members-icon {
+  background-color: black;
+  width: 5%;
+}
+
+.visit-icon {
+  background-color: black;
+  width: 5%;
+}
+
+.settings-icon {
+  background-color: black;
+  width: 5%;
+}
+
+
+/* GRID LAYOUT */
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: 75px  1fr  1fr 1fr;
+  grid-template-rows: 75px repeat(6, 1fr);
+  grid-template-areas:
+  "header header header header"
+  "leftnav innergrid innergrid innergrid"
+  "leftnav innergrid innergrid innergrid"
+  "leftnav innergrid innergrid innergrid"
+  "leftnav innergrid innergrid innergrid"
+  "leftnav innergrid innergrid innergrid";
+}
+
+.header {
+  grid-area: header;
+  background-color: #989F91;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-nav {
+  grid-area: leftnav;
+  background-color: #656A61;
+}
+
+.inner-grid {
+  grid-area: innergrid;
+}
+
+
+/* HEADER */
+
+h1 {
+  padding-left: 1em;
+  color: white;
+  font-weight: bold;
+}
+
+span{
+  font-weight: lighter;
+  opacity: .7;
+}
+
+#avatarimg {
+  display: block;
+  margin-left: 0;
+  height: 30px;
+  width: 30px;
+}
+
+ul li {
+  display: inline-block;
+}
