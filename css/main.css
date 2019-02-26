@@ -9,11 +9,6 @@ html, body {
 }
 
 
-
-.bell-icon {
-  width: 30px;
-}
-
 .dash-icon {
   background-color: black;
   width: 5%;
@@ -85,8 +80,29 @@ span{
   margin-left: 0;
   height: 30px;
   width: 30px;
+  border-radius: 30px;
 }
 
+.bell-icon {
+  width: 22px;
+  border-right: 2px solid black;
+  padding-right: 1em;
+
+}
+
+ul {
+  padding-left: 0;
+}
 ul li {
   display: inline-block;
+}
+
+ul li p {
+  margin: 0;
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+
+.avatarinfo {
+  align-self: center;
 }
