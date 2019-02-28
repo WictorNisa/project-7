@@ -8,28 +8,6 @@ html, body {
  font-family: 'Quicksand', sans-serif;
 }
 
-
-.dash-icon {
-  background-color: black;
-  width: 5%;
-}
-
-.members-icon {
-  background-color: black;
-  width: 5%;
-}
-
-.visit-icon {
-  background-color: black;
-  width: 5%;
-}
-
-.settings-icon {
-  background-color: black;
-  width: 5%;
-}
-
-
 /* GRID LAYOUT */
 
 .outer-grid {
@@ -38,6 +16,7 @@ html, body {
   grid-template-rows: 75px repeat(6, 1fr);
   grid-template-areas:
   "header header header header"
+  "leftnav innergrid innergrid innergrid"
   "leftnav innergrid innergrid innergrid"
   "leftnav innergrid innergrid innergrid"
   "leftnav innergrid innergrid innergrid"
@@ -77,32 +56,120 @@ span{
 
 #avatarimg {
   display: block;
-  margin-left: 0;
   height: 30px;
   width: 30px;
-  border-radius: 30px;
+  border-radius: 50%;
+  margin-left: 1em;
+  margin-right: .5em;
 }
 
 .bell-icon {
-  width: 22px;
-  border-right: 2px solid black;
-  padding-right: 1em;
-
-}
-
-ul {
-  padding-left: 0;
-}
-ul li {
-  display: inline-block;
-}
-
-ul li p {
-  margin: 0;
-  padding-bottom: 1em;
+  width: 40px;
+  border-right: 1px solid grey;
   padding-right: 1em;
 }
 
 .avatarinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1em;
+}
+
+.avatarinfo p {
+  color: white;
+  font-weight: lighter;
+  font-size: .9em;
+  opacity: .8;
+}
+
+
+/* LEFT NAV  */
+
+.left-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+
+}
+.dash-icon {
+  padding-top: 2em;
+  border-radius: 5px;
+  width: 55%;
+}
+
+.members-icon {
+  padding-top: 2em;
+  opacity: .7;
+  width: 55%;
+}
+
+.visit-icon {
+  padding-top: 2em;
+  width: 55%;
+  opacity: .7;
+}
+
+.settings-icon {
+  padding-top: 2em;
+  width: 55%;
+  opacity: .7;
+}
+
+
+/* INNER GRID  */
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 75px repeat(4, 1fr);
+}
+
+
+#dashboardh2 {
+  padding-left: 1em;
+}
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 3 / 3;
+  margin-top: 1em;
+  margin-right: 1.1em;
+}
+
+.search input {
+  height: 3em;
+  text-indent: 0.938em;
+  width: 85%;
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 99px;
+  right: 25px;
+}
+
+.alert {
+  grid-column: 1 / 4;
+  grid-row: 2 / 2;
+  display: flex;
+  justify-content: space-between;
+  height: 78%;
+  margin-left: 1.5em;
+  margin-right: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #989F91;
+  color: white;
+}
+
+
+.alert p {
+  margin-left: 1em;
   align-self: center;
+
+
 }
