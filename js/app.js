@@ -25,7 +25,7 @@ new Chart(document.getElementById("bar-chart"), {
       datasets: [
         {
           label: "How many visitors",
-          backgroundColor: ["#8e5ea2", "#8e5ea2","#8e5ea2","#8e5ea2","#8e5ea2", "#8e5ea2", "#8e5ea2"],
+          backgroundColor: ["#002642", "#002642","#002642","#002642","#002642", "#002642", "#002642"],
           data: [50,100,300,450,500,200, 600]
         }
       ]
@@ -44,7 +44,7 @@ new Chart(document.getElementById("pie-chart"), {
       labels: ["Phones", "Tablets", "Desktop",],
       datasets: [{
         label: "How many users",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+        backgroundColor: ["#002642", "#8e5ea2","#173953"],
         data: [5267,2345,734]
       }]
     },
