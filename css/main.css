@@ -147,7 +147,7 @@ span{
 .inner-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 75px 100px repeat(3, minmax(200px, 1fr));
+  grid-template-rows: 75px 100px repeat(4, minmax(200px, 1fr));
 x
 }
 
@@ -337,11 +337,6 @@ x
   background-color: #FAF8F8;
 }
 
-
-
-
-
-
 .twitter-icon {
   width: 60px;
   height: auto;
@@ -441,6 +436,8 @@ x
   grid-column: 3 / 3;
   grid-row: 6 / 6;
   width: 600px;
+  height: 382.25px;
+
 }
 
 
@@ -450,10 +447,11 @@ x
   align-items: center;
   padding-bottom: 1em;
   border-bottom: 1px solid grey;
+  font-size: .9em;
 }
 
 .flex-test img {
-  width: 9%;
+  width: 8%;
   margin-top: 1em;
   margin-left: .7em;
   border-radius: 50%;
@@ -461,9 +459,120 @@ x
 
 .flex-test p {
   margin-right: 1em;
-  margin-left: 1em;
 }
 
 .flex-test a {
   color: #3685B5;
 }
+
+
+.fa-angle-double-right {
+  align-self: center;
+  margin-right: 1em;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 2;
+  grid-row: 7 / 7;
+  border: 1px solid grey;
+  margin-left: 2em;
+}
+
+#input-text {
+  width: 90%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  height: 35px;
+  text-indent: 0.938em;
+  background-color: #FAF8F8;
+}
+
+#input-text:focus {
+  border-color: #3685B5;
+}
+
+#textarea-input {
+  width: 90%;
+  margin-top: 1.5em;
+  height: 120px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-indent: 0.938em;
+  background-color: #FAF8F8;
+  padding-top: 1em;
+  resize: none;
+}
+
+#textarea-input:focus {
+  border-color: #3685B5;
+}
+
+#input-send {
+  width: 90%;
+  margin-top: 1.5em;
+  border: 1px solid #173953;
+  border-radius: 6px;
+  background-color: #173953;
+  height: 40px;
+  margin-bottom: 3em;
+  color: #fff;
+}
+
+#input-send:active {
+  background-color: #3685B5;
+  border-color: white;
+  transform: scale(1.02);
+}
+
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  margin-left: 2em;
+  width: 600px;
+  grid-column: 3 / 3;
+  grid-row: 7 / 7;
+  border: 1px solid grey;
+}
+
+.settings-container h2 {
+  text-align: center;
+}
+/* ================ON-OFF SWITCH COPY PASTE CSS ================ */
+    .onoffswitch {
+        position: relative; width: 90px;
+        -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    }
+    .onoffswitch-checkbox {
+        display: none;
+    }
+    .onoffswitch-label {
+        display: block; overflow: hidden; cursor: pointer;
+        height: 30px; padding: 0; line-height: 30px;
+        border: 2px solid #999999; border-radius: 30px;
+        background-color: #EEEEEE;
+        transition: background-color 0.3s ease-in;
+    }
+    .onoffswitch-label:before {
+        content: "";
+        display: block; width: 30px; margin: 0px;
+        background: #FFFFFF;
+        position: absolute; top: 0; bottom: 0;
+        right: 58px;
+        border: 2px solid #999999; border-radius: 30px;
+        transition: all 0.3s ease-in 0s;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label {
+        background-color: #173953;;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+       border-color: #173953;;
+    }
+    .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+        right: 0px;
+    }
