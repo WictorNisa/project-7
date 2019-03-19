@@ -643,7 +643,7 @@ span{
     flex-direction: row;
   }
 
-  #dash {
+  .dash-icon {
     width: 40px;
     height: 40px;
   }
@@ -669,12 +669,12 @@ span{
   .inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 75px 100px repeat(7, 1fr);
+    grid-template-rows: 75px 100px repeat(8, 1fr);
   }
 
 
   .search {
-    justify-content: flex-start;
+    justify-content: flex-end;
     grid-column: 2 / 2;
     grid-row: 1 / 1;
   }
@@ -685,7 +685,7 @@ span{
     grid-row: 2 / 2;
     height: 50px;
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
   }
 
 
@@ -716,20 +716,21 @@ span{
   }
 
   .right-col {
-    grid-column: 2 / 2;
-    grid-row: 4 / 4;
-    margin-left: 5em;
+    grid-column: 1 / 2;
+    grid-row: 5 / 5;
+
   }
 
 
   .chart-container {
     grid-column: 1 / 2;
-     
+    height: 25vh; 
+
   }
 
   .widget {
     grid-column: 1 / 2;
-    grid-row: 5 / 5;
+    grid-row: 6 / 6;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -755,24 +756,28 @@ span{
   .upper-section {
     margin-top: 2em;
     grid-column: 1 / 2;
+    grid-row: 7 / 7;
+  }
+
+  .social-id {
     grid-row: 6 / 6;
   }
 
   .activity-container {
     grid-column: 1 / 2;
-    grid-row: 7 / 7;
+    grid-row: 8 / 8;
   }
 
 
   .input-container {
-    grid-row: 8 / 8;
+    grid-row: 9 / 9;
   }
 
 
   .settings-container {
     margin-top: 2em;
     grid-column: 1 / 2;
-    grid-row: 9 / 9;
+    grid-row: 10 / 10;
   }
 
 }

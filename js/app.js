@@ -14,6 +14,7 @@ new Chart(document.getElementById("myChart"), {
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     title: {
     }
   }
@@ -33,6 +34,7 @@ new Chart(document.getElementById("bar-chart"), {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       legend: { display: false },
       title: {
         display: true
@@ -52,6 +54,7 @@ new Chart(document.getElementById("pie-chart"), {
     },
     options: {
       responsive: true,
+      maintainAspectRatio: false,
       title: {
         display: true
       }
