@@ -13,6 +13,7 @@ new Chart(document.getElementById("myChart"), {
     ]
   },
   options: {
+    responsive: true,
     title: {
     }
   }
@@ -31,6 +32,7 @@ new Chart(document.getElementById("bar-chart"), {
       ]
     },
     options: {
+      responsive: true,
       legend: { display: false },
       title: {
         display: true
@@ -49,6 +51,7 @@ new Chart(document.getElementById("pie-chart"), {
       }]
     },
     options: {
+      responsive: true,
       title: {
         display: true
       }
