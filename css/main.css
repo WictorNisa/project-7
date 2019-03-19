@@ -669,7 +669,7 @@ span{
   .inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 75px 100px repeat(4, 1fr);
+    grid-template-rows: 75px 100px repeat(7, 1fr);
   }
 
 
@@ -685,7 +685,7 @@ span{
     grid-row: 2 / 2;
     height: 50px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
   }
 
 
@@ -720,4 +720,59 @@ span{
     grid-row: 4 / 4;
     margin-left: 5em;
   }
+
+
+  .chart-container {
+    grid-column: 1 / 2;
+     
+  }
+
+  .widget {
+    grid-column: 1 / 2;
+    grid-row: 5 / 5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .twitter {
+    width: 100%;
+  }
+
+  .facebook {
+    width: 100%;
+    margin-left: 2em;
+  }
+
+  .google{
+    width: 100%;
+    margin-left: 2em;
+    margin-right: 0;
+  }
+
+
+  .upper-section {
+    margin-top: 2em;
+    grid-column: 1 / 2;
+    grid-row: 6 / 6;
+  }
+
+  .activity-container {
+    grid-column: 1 / 2;
+    grid-row: 7 / 7;
+  }
+
+
+  .input-container {
+    grid-row: 8 / 8;
+  }
+
+
+  .settings-container {
+    margin-top: 2em;
+    grid-column: 1 / 2;
+    grid-row: 9 / 9;
+  }
+
 }
