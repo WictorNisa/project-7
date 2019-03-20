@@ -622,12 +622,13 @@ span{
 
 
 /* =============MEDIA QUERY================== */
+/* ========================== TABLET ======================= */
 
 @media (min-width: 768px) and (max-width: 1025px) {
 
   .outer-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 75px 100px repeat(5, 1fr);
+    grid-template-rows: 75px 75px repeat(5, 1fr);
     grid-template-areas:
     "header header"
     "leftnav leftnav"
@@ -639,13 +640,15 @@ span{
   }
 
 
-  .left-nav {
+  .left-nav {
     flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 0;
   }
 
-  .dash-icon {
-    width: 40px;
-    height: 40px;
+  .dash-icon {
+    width: 4%;
+    padding-top: 0;
   }
 
   #dashboardh2 {
@@ -653,23 +656,25 @@ span{
   }
 
   .members-icon {
-    width: 40px;
-    height: 40px;
+    width: 4%;
+    padding-top: 0;
   }
 
   .visit-icon {
-    width: 6%;
+    width: 4%;
+    padding-top: 0;
   }
 
   .settings-icon {
-    width: 6%;
+    width: 4%;
+    padding-top: 0;
   }
 
 
   .inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 75px 100px repeat(8, 1fr);
+    grid-template-rows: 75px 110px repeat(8, 1fr);
   }
 
 
@@ -713,19 +718,24 @@ span{
   .left-col {
     grid-column: 1 / 1;
     grid-row: 4 / 4;
+    margin-top: 2em;
+    height: 27vh !important;
+    width: 93vw !important;
   }
 
   .right-col {
     grid-column: 1 / 2;
     grid-row: 5 / 5;
-
+    margin-top: 3.5em;
+    height: 27vh !important;
+    width: 88vw !important;
   }
 
 
   .chart-container {
     grid-column: 1 / 2;
-    height: 25vh; 
-
+    height: 29vh !important;
+    width: 93vw !important;
   }
 
   .widget {
@@ -763,14 +773,24 @@ span{
     grid-row: 6 / 6;
   }
 
+
+  .members-container {
+    width: 95%;
+    margin-bottom: 3em;
+  }
+
   .activity-container {
     grid-column: 1 / 2;
     grid-row: 8 / 8;
+    width: 95%;
+    height: 488.25px;
   }
 
 
   .input-container {
     grid-row: 9 / 9;
+    width: 95%;
+    margin-top: 2em;
   }
 
 
@@ -778,6 +798,206 @@ span{
     margin-top: 2em;
     grid-column: 1 / 2;
     grid-row: 10 / 10;
+    width: 95%;
+    margin-bottom: 2em;
   }
 
+  .search {
+    display: none;
+  }
+
+}
+
+/* ========================== MOBILE ======================= */
+@media (min-width: 320px) and (max-width: 767px) {
+
+  .outer-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 75px repeat(5, 1fr);
+    grid-template-areas:
+    "header"
+    "leftnav"
+    "innergrid"
+    "innergrid"
+    "innergrid"
+    "innergrid"
+    "innergrid";
+  }
+
+
+  .left-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 0;
+  }
+
+  .dash-icon {
+    width: 7%;
+    padding-top: 0;
+  }
+
+  #dashboardh2 {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .members-icon {
+    width: 7%;
+    padding-top: 0;
+  }
+
+  .visit-icon {
+    width: 7%;
+    padding-top: 0;
+  }
+
+  .settings-icon {
+    width: 7%;
+    padding-top: 0;
+  }
+
+
+  .inner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 75px 110px repeat(8, 1fr);
+  }
+
+
+  .search {
+    justify-content: flex-end;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+
+  .alert {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    height: 50px;
+    width: 85%;
+  }
+
+
+  .traffic{
+    height: 300px;
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+  }
+
+  .traffic-info {
+    grid-column: 1 / 1;
+    justify-content: flex-start;
+  }
+
+
+  #traffic-left {
+    margin-right: 1em;
+  }
+
+
+  .traffic-info p {
+    padding-left: 1em;
+  }
+
+  .left-col {
+    grid-column: 1 / 1;
+    grid-row: 4 / 4;
+    margin-top: 2em;
+    height: 27vh !important;
+    width: 93vw !important;
+  }
+
+  .right-col {
+    grid-column: 1 / 1;
+    grid-row: 5 / 5;
+    margin-top: 3.5em;
+    height: 27vh !important;
+    width: 88vw !important;
+  }
+
+
+  .chart-container {
+    grid-column: 1 / 1;
+    height: 29vh !important;
+    width: 93vw !important;
+  }
+
+  .widget {
+    grid-column: 1 / 1;
+    grid-row: 6 / 6;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .twitter {
+    width: 83%;
+    margin-left: 0;
+  }
+
+  .facebook {
+    width: 83%;
+    margin-left: 0;
+  }
+
+  .google{
+    width: 83%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  .upper-section {
+    margin-top: 2em;
+    grid-column: 1 / 1;
+    grid-row: 7 / 7;
+  }
+
+  .social-id {
+    grid-row: 6 / 6;
+  }
+
+
+  .members-container {
+    width: 95%;
+    margin-bottom: 3em;
+    margin-left: .6em;
+  }
+
+  .activity-container {
+    grid-column: 1 / 1;
+    grid-row: 8 / 8;
+    width: 95%;
+    margin-left: .6em;
+    height: 373.25px;
+  }
+
+
+  .input-container {
+    grid-row: 9 / 9;
+    width: 93%;
+    margin-top: 2em;
+    margin-left: 1em;
+  }
+
+
+  .settings-container {
+    margin-top: 2em;
+    grid-column: 1 / 1;
+    grid-row: 10 / 10;
+    width: 93%;
+    margin-bottom: 2em;
+    margin-left: 1em;
+  }
+
+  .search {
+    display: none;
+  }
+
+  h2 {
+    text-align: center;
+    margin-left: 0;
+  }
 }
