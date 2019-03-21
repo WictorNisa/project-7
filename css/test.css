@@ -22,6 +22,7 @@ button:focus {
 
 
 .outer-grid {
+  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 75px 75px repeat(5, 1fr);
   grid-template-areas:
@@ -35,6 +36,7 @@ button:focus {
 }
 
 .inner-grid {
+  grid-area: innergrid;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 75px 110px repeat(8, 1fr);
@@ -119,8 +121,8 @@ span{
 }
 
 .fa-circle {
-  position: absolute;
   color: #87FF65;
+  position: absolute;
   top: 20px;
   right: 161px;
 }
@@ -671,6 +673,7 @@ margin-left: 0;
 
   .left-nav {
     flex-direction: row;
+    grid-column: 1 / 3;
     justify-content: space-evenly;
     padding-top: 0;
     height: 80px;
@@ -844,9 +847,7 @@ margin-left: 0;
   }
 }
 
-
-
-@media (min-width: 1024px) {
+@media (min-width: 1024px) {
   .outer-grid {
     display: grid;
     grid-template-columns: 75px  1fr  1fr 1fr;
@@ -871,6 +872,9 @@ margin-left: 0;
   .left-nav {
     grid-area: leftnav;
     background-color: #173953;
+    grid-row: -1/2;
+    height: 100%;
+    justify-content: flex-start;
   }
 
   .inner-grid {
@@ -1369,6 +1373,609 @@ margin-left: 0;
   }
   /* ================ON-OFF SWITCH COPY PASTE CSS ================ */
       .onoffswitch {
+          position: relative; width: 90px;
+          -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+      }
+      .onoffswitch-checkbox {
+          display: none;
+      }
+      .onoffswitch-label {
+          display: block; overflow: hidden; cursor: pointer;
+          height: 30px; padding: 0; line-height: 30px;
+          border: 2px solid #999999; border-radius: 30px;
+          background-color: #EEEEEE;
+          transition: background-color 0.3s ease-in;
+      }
+      .onoffswitch-label:before {
+          content: "";
+          display: block; width: 30px; margin: 0px;
+          background: #FFFFFF;
+          position: absolute; top: 0; bottom: 0;
+          right: 58px;
+          border: 2px solid #999999; border-radius: 30px;
+          transition: all 0.3s ease-in 0s;
+      }
+      .onoffswitch-checkbox:checked + .onoffswitch-label {
+          background-color: #173953;;
+      }
+      .onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+         border-color: #173953;;
+      }
+      .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+          right: 0px;
+      }
+
+
+
+    #time-selector {
+      width: 95%;
+      margin-top: 2em;
+      border: 1px solid grey;
+      border-radius: 5px;
+      height: 35px;
+      text-indent: 0.938em;
+      background-color: #FAF8F8;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-right: 1em
+    }
+
+    #save {
+      width: 40%;
+      margin-top: 1.5em;
+      border: 1px solid #173953;
+      border-radius: 6px;
+      background-color: #173953;
+      height: 40px;
+      margin-bottom: 3em;
+      color: #fff;
+      margin-right: 1em
+    }
+
+    #cancel {
+      width: 40%;
+      margin-top: 1.5em;
+      border: 1px solid grey;
+      border-radius: 6px;
+      background-color: grey;
+      height: 40px;
+      margin-bottom: 3em;
+      color: #fff;
+      margin-left: 1em;
+    }
+}
+
+@media (min-width: 1024px) {
+  .outer-grid {
+    display: grid;
+    grid-template-columns: 75px  1fr  1fr 1fr;
+    grid-template-rows: 75px repeat(6, 1fr);
+    grid-template-areas:
+    "header header header header"
+    "leftnav innergrid innergrid innergrid"
+    "leftnav innergrid innergrid innergrid"
+    "leftnav innergrid innergrid innergrid"
+    "leftnav innergrid innergrid innergrid"
+    "leftnav innergrid innergrid innergrid"
+    "leftnav innergrid innergrid innergrid";
+  }
+
+  body {
+    background-color: red;
+  }
+
+  .header {
+    grid-area: header;
+    background-color: #002642;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left-nav {
+    grid-area: leftnav;
+    background-color: #173953;
+    grid-row: -1/2;
+  }
+
+  .inner-grid {
+    grid-area: innergrid;
+  } */
+
+
+  /* HEADER */
+
+   h1 {
+    padding-left: 1em;
+    color: white;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: grey;
+    margin-left: 1em;
+  }
+
+  span{
+    font-weight: lighter;
+    opacity: .7;
+  }
+
+  #avatarimg {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 1em;
+    margin-right: .5em;
+    border: 1px solid #fff;
+  }
+
+  .bell-icon {
+    width: 40px;
+    border-right: 1px solid grey;
+    padding-right: 1em;
+    transition: transform 1s linear;
+  }
+
+  .bell-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .avatarinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+  }
+
+  .avatarinfo p {
+    color: white;
+    font-weight: lighter;
+    font-size: .9em;
+    opacity: .8;
+  }
+
+
+  /* LEFT NAV  */
+
+   .left-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+
+  }
+  .dash-icon {
+    padding-top: 2em;
+    border-radius: 5px;
+    width: 55%;
+  }
+
+  .members-icon {
+    padding-top: 2em;
+    opacity: .7;
+    width: 55%;
+  }
+
+  .visit-icon {
+    padding-top: 2em;
+    width: 55%;
+    opacity: .7;
+  }
+
+  .settings-icon {
+    padding-top: 2em;
+    width: 55%;
+    opacity: .7;
+  }
+
+
+  /* INNER GRID  */
+
+ .inner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 75px 100px repeat(4, minmax(200px, 1fr));
+  }
+
+  #dashboardh2{
+    padding-left: 1em;
+  }
+
+  .search {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 3 / 3;
+    margin-top: 1em;
+    margin-right: 1.1em;
+  }
+
+  .search input {
+    height: 3em;
+    text-indent: 0.938em;
+    width: 40%;
+    transition: width .7s linear;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+
+  .search input:focus {
+    width: 45%;
+    border: 2px solid #173953;
+  }
+
+  .search .fa-search {
+    position: absolute;
+    top: 99px;
+    right: 25px;
+  }
+
+  .alert {
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
+    display: flex;
+    justify-content: space-between;
+    height: 40%;
+    width: 80%;
+    max-width: 1300px;
+    margin-left: 1.5em;
+    margin-right: 1em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: #173953;
+  }
+
+
+  #alert-text {
+    margin-left: 1em;
+    align-self: center;
+    color: white;
+  }
+
+  #closeAlert {
+    align-self: center;
+    color: white;
+    padding-right: 1em;
+    margin-top: .5em;
+
+  }
+
+
+  .traffic {
+    grid-column: 1 / 4;
+    grid-row: 3;
+  }
+
+  .traffic-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2.5em;
+  }
+
+  .traffic-info p {
+    font-size: .9em;
+    padding-left: 2em;
+    color: grey;
+  }
+
+  #traffic-left {
+    font-size: 1em;
+    margin-right: auto;
+    margin-left: 2em;
+    color: grey;
+  }
+
+  #myChart{
+    border: 1px solid grey;
+  }
+
+
+  .chart-container{
+
+    margin-left: 2em;
+  }
+
+
+
+  /* ======================= */
+
+
+  .left-col h2 {
+    margin-left: 1.3em;
+  }
+
+  .left-col {
+    margin-left: 1em;
+    position: relative;
+    grid-column: 1 / 1;
+  }
+
+  #bar-chart {
+    margin-left: 2em;
+    border: 1px solid grey;
+  }
+
+
+
+  .right-col {
+    grid-column: 3 / 3;
+    margin-left: 3em;
+    margin-right: 2em;
+  }
+
+  #pie-chart{
+    margin-bottom: 1em;
+    border: 1px solid grey;
+  }
+
+
+
+
+
+  /* ==========Widgets========== */
+
+   .social-id {
+    margin-left: 2em;
+    grid-column: 1 / 1;
+    grid-row: 5 / 5;
+    margin-bottom: 2em;
+  }
+
+  .widget {
+    margin-top: 3em;
+    grid-column: 1 / 4;
+    grid-row: 5 / 5;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .twitter {
+    display: flex;
+    margin-left: 2em;
+    border: 1px solid grey;
+    width: 33%;
+    max-width: 400px;
+    height: 100px;
+    margin-top: 2em;
+    background-color: #FAF8F8;
+  }
+
+  .facebook {
+    display: flex;
+    border: 1px solid grey;
+    width: 33%;
+    max-width: 400px;
+    height: 100px;
+    margin-top: 2em;
+    background-color: #FAF8F8;
+  }
+
+  .google {
+    display: flex;
+    margin-right: 2em;
+    border: 1px solid grey;
+    width: 33%;
+    max-width: 400px;
+    height: 100px;
+    margin-top: 2em;
+    background-color: #FAF8F8;
+  }
+
+  .twitter-icon {
+    width: 60px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #002642;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+  .facebook-icon {
+    width: 60px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #002642;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+  .google-icon{
+    width: 60px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #002642;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+  .twitter p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    padding-left: 30px;
+    color: #3685B5;
+  }
+
+  .facebook p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    padding-left: 30px;
+    color: #3685B5;
+  }
+
+  .google p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    padding-left: 30px;
+    color: #3685B5;
+  }
+
+  #bigOne {
+    font-size: 2.1em;
+    font-weight: lighter;
+    color: #061826;
+  }
+
+  #bigTwo {
+    font-size: 2.1em;
+    font-weight: lighter;
+    color: #061826;
+  }
+
+  #bigThree {
+    font-size: 2.1em;
+    font-weight: lighter;
+    color: #061826;
+  }
+
+  /* ==================members================= */
+
+
+   .members-container {
+    display: flex;
+    margin-left: 2em;
+    flex-direction: column;
+    border: 1px solid grey;
+    grid-column: 2 / 2;
+    grid-row: 6 / 6;
+    width: 600px;
+  }
+
+  .activity-container {
+    display: flex;
+    margin-left: 2em;
+    flex-direction: column;
+    border: 1px solid grey;
+    grid-column: 3 / 3;
+    grid-row: 6 / 6;
+    width: 600px;
+    height: 382.25px;
+
+  }
+
+
+  .flex-test {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid grey;
+    font-size: .9em;
+  }
+
+  .flex-test img {
+    width: 8%;
+    margin-top: 1em;
+    margin-left: .7em;
+    border-radius: 50%;
+  }
+
+  .flex-test p {
+    margin-right: 1em;
+  }
+
+  .flex-test a {
+    color: #3685B5;
+  }
+
+
+  .fa-angle-double-right {
+    align-self: center;
+    margin-right: 1em;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 2;
+    grid-row: 7 / 7;
+    border: 1px solid grey;
+    margin-left: 2em;
+  }
+
+  #input-text {
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 35px;
+    text-indent: 0.938em;
+    background-color: #FAF8F8;
+  }
+
+  #input-text:focus {
+    border-color: #3685B5;
+  }
+
+  #textarea-input {
+    width: 90%;
+    margin-top: 1.5em;
+    height: 120px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-indent: 0.938em;
+    background-color: #FAF8F8;
+    padding-top: 1em;
+    resize: none;
+  }
+
+  #textarea-input:focus {
+    border-color: #3685B5;
+  }
+
+  #input-send {
+    width: 90%;
+    margin-top: 1.5em;
+    border: 1px solid #173953;
+    border-radius: 6px;
+    background-color: #173953;
+    height: 40px;
+    margin-bottom: 3em;
+    color: #fff;
+  }
+
+  #input-send:active {
+    background-color: #3685B5;
+    border-color: white;
+    transform: scale(1.02);
+  }
+
+
+  .settings-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2em;
+    margin-left: 2em;
+    width: 600px;
+    grid-column: 3 / 3;
+    grid-row: 7 / 7;
+    border: 1px solid grey;
+  }
+
+  .settings-container h2 {
+    text-align: center;
+  }
+  /* ================ON-OFF SWITCH COPY PASTE CSS ================ */
+       .onoffswitch {
           position: relative; width: 90px;
           -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
       }
