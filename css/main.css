@@ -856,7 +856,6 @@ span{
     padding-top: 0;
   }
 
-
   .inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -935,6 +934,7 @@ span{
   .twitter {
     width: 83%;
     margin-left: 0;
+    margin-right: 
   }
 
   .facebook {
