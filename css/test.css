@@ -118,6 +118,13 @@ span{
   opacity: .8;
 }
 
+.fa-circle {
+  position: absolute;
+  color: #87FF65;
+  top: 20px;
+  right: 161px;
+}
+
 
 /* LEFT NAV  */
 .dash-icon {
