@@ -1333,7 +1333,8 @@ margin-left: 0;
     grid-row: 7 / 7;
     border: 1px solid grey;
     margin-left: 0;
-    width: 50%;
+    margin-top: 0;
+    width: 100%;
   }
 
   #input-text {
@@ -1389,12 +1390,13 @@ margin-left: 0;
     flex-direction: column;
     padding-left: 2em;
     margin-left: 2em;
-    width: 600px;
     grid-column: 2 / 3;
     grid-row: 7 / 7;
     border: 1px solid grey;
     margin-left: 0;
-    width: 50%;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .settings-container h2 {
