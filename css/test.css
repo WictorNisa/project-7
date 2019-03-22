@@ -1022,7 +1022,7 @@ margin-left: 0;
   .search .fa-search {
     position: absolute;
     top: 112px;
-    right: 48px;
+    right: 25px;
   }
 
   .alert {
@@ -1107,7 +1107,7 @@ margin-left: 0;
     grid-row: 4 / 4;
     margin-top: 3em;
     height: 50vh !important;
-    width: 45vw !important;
+    width: 48.6vw !important;
     margin-top: 0;
   }
 
